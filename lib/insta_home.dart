@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:instaclone_ben/camera.dart';
 
 import 'insta_body.dart';
-
 
 class InstaHome extends StatelessWidget {
   final topBar = new AppBar(
     backgroundColor: new Color(0xfff8faf8),
     centerTitle: true,
     elevation: 1.0,
-    leading: new Icon(Icons.camera_alt),
+    leading: Icon(Icons.camera_alt),
     title: SizedBox(
         height: 35.0, child: Image.asset("assets/images/insta_logo.png")),
     actions: <Widget>[
@@ -43,25 +43,26 @@ class InstaHome extends StatelessWidget {
                   icon: Icon(
                     Icons.search,
                   ),
-                  onPressed: null,
+                  onPressed: () {},
                 ),
                 new IconButton(
                   icon: Icon(
                     Icons.add_box,
                   ),
-                  onPressed: null,
+                  onPressed: () => Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Camera())),
                 ),
                 new IconButton(
                   icon: Icon(
                     Icons.favorite,
                   ),
-                  onPressed: null,
+                  onPressed: () {},
                 ),
                 new IconButton(
                   icon: Icon(
                     Icons.account_box,
                   ),
-                  onPressed: null,
+                  onPressed: () {},
                 ),
               ],
             ),

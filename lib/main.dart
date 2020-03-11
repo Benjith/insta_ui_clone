@@ -1,11 +1,16 @@
+import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:instaclone_ben/insta_home.dart';
 
+import 'appdata.dart';
 
-void main() => runApp(new MyApp());
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  AppData.cameras = await availableCameras();
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
-  
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:instaclone_ben/insta_list.dart';
-import 'package:instaclone_ben/insta_stories.dart';
-
 
 class InstaBody extends StatelessWidget {
   @override
@@ -9,7 +7,7 @@ class InstaBody extends StatelessWidget {
     return new Column(
       mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
-        Expanded(flex: 1, child: new InstaStories()),
+        // Expanded(flex: 1, child: new InstaStories()),
         Flexible(child: InstaList())
       ],
     );

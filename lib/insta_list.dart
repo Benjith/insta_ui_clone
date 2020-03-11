@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:instaclone_ben/insta_stories.dart';
 
-
 class InstaList extends StatelessWidget {
+// List<Map> users= [
+//   {}
+// ];
+
   @override
   Widget build(BuildContext context) {
     var deviceSize = MediaQuery.of(context).size;
@@ -12,7 +15,7 @@ class InstaList extends StatelessWidget {
       itemBuilder: (context, index) => index == 0
           ? new SizedBox(
               child: new InstaStories(),
-              height: deviceSize.height * 0.15,
+              height: deviceSize.height * 0.18,
             )
           : Column(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -33,15 +36,15 @@ class InstaList extends StatelessWidget {
                               shape: BoxShape.circle,
                               image: new DecorationImage(
                                   fit: BoxFit.fill,
-                                  image: new NetworkImage(
-                                      "https://pbs.twimg.com/profile_images/916384996092448768/PF1TSFOE_400x400.jpg")),
+                                  image: new AssetImage(
+                                      'assets/images/kerala.jpg')),
                             ),
                           ),
                           new SizedBox(
                             width: 10.0,
                           ),
                           new Text(
-                            "imthpk",
+                            "Kerala Tourism",
                             style: TextStyle(fontWeight: FontWeight.bold),
                           )
                         ],
@@ -55,8 +58,8 @@ class InstaList extends StatelessWidget {
                 ),
                 Flexible(
                   fit: FlexFit.loose,
-                  child: new Image.network(
-                    "https://images.pexels.com/photos/672657/pexels-photo-672657.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+                  child: new Image.asset(
+                    "assets/images/list/$index.jpg",
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -90,7 +93,7 @@ class InstaList extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   child: Text(
-                    "Liked by pawankumar, pk and 528,331 others",
+                    "Liked by Shameer Km Fykz, you and 528,331 others",
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ),
@@ -106,8 +109,7 @@ class InstaList extends StatelessWidget {
                           shape: BoxShape.circle,
                           image: new DecorationImage(
                               fit: BoxFit.fill,
-                              image: new NetworkImage(
-                                  "https://pbs.twimg.com/profile_images/916384996092448768/PF1TSFOE_400x400.jpg")),
+                              image: new AssetImage("assets/images/user.png")),
                         ),
                       ),
                       new SizedBox(

@@ -1,4 +1,4 @@
-# Uber UI clone [flutter]
+# Insta UI clone [flutter]
 
 Insta UI clone in flutter 
 
